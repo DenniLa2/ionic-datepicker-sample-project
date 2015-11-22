@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ionic-datepicker'])
+angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -23,39 +23,35 @@ angular.module('starter', ['ionic', 'ionic-datepicker'])
 
     var weekDaysList = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
     var monthList = ["Январь", "Февраль", "Март", "Апрель", "Май", "Иннь", "Июль", "Август", "Сентябрь", "Октяборь", "Ноябрь", "Декабрь"];
-    var s0 = new Date(2015, 9, 31)
-      , s1 = new Date(2015, 10, 10)
-      , s2 = new Date(2015, 10, 11)
-      , s3 = new Date(2015, 10, 12)
-      , s4 = new Date(2015, 10, 17)
-      , s5 = new Date(2015, 11, 1);
-    var selectedDates = [s1, s2, s3, s4, s0, s5];
+
     var h0 = new Date(2015, 10, 11)
       , h1 = new Date(2015, 10, 9)
       , h2 = new Date(2015, 10, 3)
       , h3 = new Date(2015, 10, 10)
       , h4 = new Date(2015, 9, 31)
-      , h5 = new Date(2015, 10, 16);
-    var holidays = [h0, h1, h2, h3, h4, h5];
+      , h5 = new Date(2015, 10, 16)
+      , holidays = [h0, h1, h2, h3, h4, h5];
+
     var d0 = new Date(2015, 10, 16)
       , d1 = new Date(2015, 10, 17)
       , d2 = new Date(2015, 10, 17)
       , d3 = new Date(2015, 9, 30)
-      , d4 = new Date(2015, 11, 1);
-    var disabledDates = [d0, d1, d2, d3, d4];
-    $scope.selectedDates = [];
-    $scope.selectedDates.push(s0);
-    $scope.selectedDates.push(s1);
-    $scope.selectedDates.push(s2);
-    $scope.selectedDates.push(s3);
-    $scope.selectedDates.push(s4);
-    $scope.selectedDates.push(s4);
-    $scope.selectedDates.push(s5);
+      , d4 = new Date(2015, 11, 1)
+      , disabledDates = [d0, d1, d2, d3, d4];
+
+    var s0 = new Date(2015, 9, 31)  // preview month
+      , s1 = new Date(2015, 10, 10) // holiday
+      , s2 = new Date(2015, 10, 11) // holiday
+      , s3 = new Date(2015, 10, 12) //
+      , s4 = new Date(2015, 10, 12) // clone
+      , s5 = new Date(2015, 10, 17) // conflict with disabled
+      , s6 = new Date(2015, 11, 1); // conflict with disabled, next month
+    $scope.selectedDates = [s1, s2, s3, s4, s0, s5, s6];
 
     $scope.datepickerObject = {
-      templateType: 'POPUP', // POPUP | MODAL < TODO
+      templateType: 'POPUP', // POPUP | MODAL
 
-      header: 'Select date',
+      //header: 'Select Date',
       headerClass: 'royal-bg light',
 
       btnsIsNative: false,
@@ -66,13 +62,13 @@ angular.module('starter', ['ionic', 'ionic-datepicker'])
       btnCancel: 'ЗАКРЫТЬ',
       btnCancelClass: 'button-clear button-dark',
 
-      btnTodayShow: false,
-      btnToday: 'Сегодня',
-      btnTodayClass: 'button-positive',
+      //btnTodayShow: true,
+      btnToday: 'Today',
+      btnTodayClass: 'button-clear button-dark',
 
-      btnClearShow: false,
-      btnClear: 'Очистить',
-      btnClearClass: 'button-royal',
+      //btnClearShow: true,
+      btnClear: 'Clear',
+      btnClearClass: 'button-clear button-dark',
 
       selectType: 'PERIOD', // SINGLE | PERIOD | MULTI
       accessType: 'WRITE', // READ | WRITE
@@ -89,9 +85,6 @@ angular.module('starter', ['ionic', 'ionic-datepicker'])
       mondayFirst: true,
       weekDaysList: weekDaysList,
       monthList: monthList,
-
-      modalHeaderColor: 'bar-positive',
-      modalFooterColor: 'bar-positive',
 
       callback: function (dates) {  //Mandatory
         retSelectedDates(dates);
