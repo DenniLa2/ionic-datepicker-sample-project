@@ -32,6 +32,12 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       , h5 = new Date(2015, 10, 16)
       , holidays = [h0, h1, h2, h3, h4, h5];
 
+    var c0 = new Date(2015, 10, 11)
+      , c1 = new Date(2015, 10, 9)
+      , c2 = new Date(2015, 11, 3)
+      , c3 = new Date(2015, 10, 10)
+      , calendar = [c0, c1, c2, c3];
+
     var d0 = new Date(2015, 10, 16)
       , d1 = new Date(2015, 10, 17)
       , d2 = new Date(2015, 10, 17)
@@ -77,7 +83,30 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       selectedDates: $scope.selectedDates,
       //viewMonth: $scope.selectedDates, //
       disabledDates: disabledDates,
+
       holidays: holidays,
+
+      calendar1: holidays,
+      calendar1Class: '',
+
+      calendar2: calendar,
+      calendar2Class: '',
+
+      calendar3: calendar,
+      calendar3Class: '',
+
+      calendar4: calendar,
+      calendar4Class: 'cal-color-black',
+
+      calendar5: calendar,
+      calendar5Class: '',
+
+      calendar6: calendar,
+      calendar6Class: '',
+
+      calendar7: calendar,
+      calendar7Class: '',
+
       conflictSelectedDisabled: 'DISABLED', // SELECTED | DISABLED
 
       closeOnSelect: false,
