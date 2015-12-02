@@ -24,38 +24,38 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
     var weekDaysList = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
     var monthList = ["Январь", "Февраль", "Март", "Апрель", "Май", "Иннь", "Июль", "Август", "Сентябрь", "Октяборь", "Ноябрь", "Декабрь"];
 
-    var h0 = new Date(2015, 10, 11)
-      , h1 = new Date(2015, 10, 9)
-      , h2 = new Date(2015, 10, 3)
-      , h3 = new Date(2015, 10, 10)
-      , h4 = new Date(2015, 9, 31)
-      , h5 = new Date(2015, 10, 16)
+    var h0 = new Date(2015, 11, 11)
+      , h1 = new Date(2015, 11, 9)
+      , h2 = new Date(2015, 11, 3)
+      , h3 = new Date(2015, 11, 10)
+      , h4 = new Date(2015, 10, 30)
+      , h5 = new Date(2015, 11, 16)
       , holidays = [h0, h1, h2, h3, h4, h5];
 
-    var c0 = new Date(2015, 10, 11)
-      , c1 = new Date(2015, 10, 9)
-      , c2 = new Date(2015, 11, 3)
-      , c3 = new Date(2015, 10, 10)
+    var c0 = new Date(2015, 11, 11)
+      , c1 = new Date(2015, 11, 9)
+      , c2 = new Date(2015, 12, 3)
+      , c3 = new Date(2015, 11, 10)
       , calendar = [c0, c1, c2, c3];
 
-    var d0 = new Date(2015, 10, 16)
-      , d1 = new Date(2015, 10, 17)
-      , d2 = new Date(2015, 10, 17)
-      , d3 = new Date(2015, 9, 30)
-      , d4 = new Date(2015, 11, 1)
+    var d0 = new Date(2015, 11, 16)
+      , d1 = new Date(2015, 11, 17)
+      , d2 = new Date(2015, 11, 17)
+      , d3 = new Date(2015, 10, 30)
+      , d4 = new Date(2015, 12, 1)
       , disabledDates = [d0, d1, d2, d3, d4];
 
-    var s0 = new Date(2015, 9, 31)  // preview month
-      , s1 = new Date(2015, 10, 10) // holiday
-      , s2 = new Date(2015, 10, 11) // holiday
-      , s3 = new Date(2015, 10, 12) //
-      , s4 = new Date(2015, 10, 12) // clone
-      , s5 = new Date(2015, 10, 17) // conflict with disabled
-      , s6 = new Date(2015, 11, 1); // conflict with disabled, next month
+    var s0 = new Date(2015, 10, 31)  // preview month
+      , s1 = new Date(2015, 11, 10) // holiday
+      , s2 = new Date(2015, 11, 11) // holiday
+      , s3 = new Date(2015, 11, 12) //
+      , s4 = new Date(2015, 11, 12) // clone
+      , s5 = new Date(2015, 11, 17) // conflict with disabled
+      , s6 = new Date(2015, 12, 1); // conflict with disabled, next month
     $scope.selectedDates = [s1, s2, s3, s4, s0, s5, s6];
 
     $scope.datepickerObject = {
-      templateType: 'POPUP', // POPUP | MODAL
+      templateType: 'MODAL', // POPUP | MODAL
 
       //header: 'Select Date',
       headerClass: 'royal-bg light',
@@ -77,6 +77,12 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       btnClearClass: 'button-clear button-dark',
 
       selectType: 'PERIOD', // SINGLE | PERIOD | MULTI
+
+      tglSelectByWeekShow: true, // true | false (default)
+      isSelectByWeek: true, // true (default) | false
+      tglSelectByWeekClass: 'toggle-positive',
+      titleSelectByWeekClass: 'positive positive-border',
+
       accessType: 'WRITE', // READ | WRITE
       //errorLanguage: 'RU', // EN | RU
 
