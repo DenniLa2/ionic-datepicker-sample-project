@@ -55,7 +55,7 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
     $scope.selectedDates = [s1, s2, s3, s4, s0, s5, s6];
 
     $scope.datepickerObject = {
-      templateType: 'MODAL', // POPUP | MODAL
+      templateType: 'POPUP', // POPUP | MODAL
       modalFooterClass: 'bar-light',
       //header: 'Select Date',
       headerClass: 'royal-bg light',
