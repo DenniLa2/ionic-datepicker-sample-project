@@ -79,8 +79,9 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       selectType: 'PERIOD', // SINGLE | PERIOD | MULTI
 
       tglSelectByWeekShow: true, // true | false (default)
+      tglSelectByWeek: 'By week',
       isSelectByWeek: true, // true (default) | false
-      selectByWeekMode: 'NORMAL', // INVERSION (default), NORMAL
+      selectByWeekMode: 'INVERSION', // INVERSION (default), NORMAL
       tglSelectByWeekClass: 'toggle-positive',
       titleSelectByWeekClass: 'positive positive-border',
 
