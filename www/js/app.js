@@ -36,7 +36,20 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       , c1 = new Date(2015, 11, 9)
       , c2 = new Date(2015, 12, 3)
       , c3 = new Date(2015, 11, 10)
-      , calendar = [c0, c1, c2, c3];
+      , c4 = new Date(2015, 11, 12)
+      , c5 = new Date(2015, 11, 16)
+      , c6 = new Date(2015, 11, 18)
+      , c7 = new Date(2015, 11, 19)
+      , c8 = new Date(2015, 11, 22)
+      , c9 = new Date(2015, 11, 27)
+      , c10 = new Date(2015, 11, 25)
+      , calendar1 = [c0, c1]
+      , calendar2 = [c2, c3]
+      , calendar3 = [c4]
+      , calendar4 = [c2, c5]
+      , calendar5 = [c4, c10]
+      , calendar6 = [c6, c7, c8, c9]
+      , calendar7 = [c5, c6];
 
     var d0 = new Date(2015, 11, 16)
       , d1 = new Date(2015, 11, 17)
@@ -57,7 +70,7 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
     $scope.datepickerObject = {
       templateType: 'POPUP', // POPUP | MODAL
       modalFooterClass: 'bar-light',
-      //header: 'Select Date',
+      //header: 'multi-date-picker',
       headerClass: 'royal-bg light',
 
       btnsIsNative: false,
@@ -65,7 +78,7 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       btnOk: 'OK',
       btnOkClass: 'button-clear cal-green',
 
-      btnCancel: 'ЗАКРЫТЬ',
+      btnCancel: 'Close',
       btnCancelClass: 'button-clear button-dark',
 
       //btnTodayShow: true,
@@ -81,39 +94,52 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       tglSelectByWeekShow: true, // true | false (default)
       tglSelectByWeek: 'By week',
       isSelectByWeek: true, // true (default) | false
-      selectByWeekMode: 'INVERSION', // INVERSION (default), NORMAL
+      selectByWeekMode: 'NORMAL', // INVERSION (default), NORMAL
       tglSelectByWeekClass: 'toggle-positive',
       titleSelectByWeekClass: 'positive positive-border',
 
       accessType: 'WRITE', // READ | WRITE
+      //showErrors: true, // true (default), false
       //errorLanguage: 'RU', // EN | RU
+
+      //fromDate: new Date(2015, 9),
+      //toDate: new Date(2016, 1),
 
       selectedDates: $scope.selectedDates,
       //viewMonth: $scope.selectedDates, //
       disabledDates: disabledDates,
 
       holidays: holidays,
+      holidaysClass: '',
+      holidaysName: 'holidays',
 
-      calendar1: holidays,
-      calendar1Class: '',
+      calendar1: calendar1,
+      //calendar1Class: '',
+      calendar1Name: 'same days',
 
-      calendar2: calendar,
+      calendar2: calendar2,
       calendar2Class: '',
+      //calendar2Name: 'calendar 2',
 
-      calendar3: calendar,
+      calendar3: calendar3,
       calendar3Class: '',
+      calendar3Name: 'birthdays',
 
-      calendar4: calendar,
+      calendar4: calendar4,
       calendar4Class: 'cal-color-black',
+      //calendar4Name: 'date-picker',
 
-      calendar5: calendar,
+      calendar5: calendar5,
       calendar5Class: '',
+      calendar5Name: 'vacation',
 
-      calendar6: calendar,
+      calendar6: calendar6,
       calendar6Class: '',
+      calendar6Name: 'red days',
 
-      calendar7: calendar,
+      calendar7: calendar7,
       calendar7Class: '',
+      //calendar7Name: 'same dates',
 
       conflictSelectedDisabled: 'DISABLED', // SELECTED | DISABLED
 
