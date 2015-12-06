@@ -119,7 +119,7 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
 
       calendar2: calendar2,
       calendar2Class: '',
-      //calendar2Name: 'calendar 2',
+      calendar2Name: 'calendar 2',
 
       calendar3: calendar3,
       calendar3Class: '',
@@ -127,7 +127,7 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
 
       calendar4: calendar4,
       calendar4Class: 'cal-color-black',
-      //calendar4Name: 'date-picker',
+      calendar4Name: 'date-picker',
 
       calendar5: calendar5,
       calendar5Class: '',
@@ -139,7 +139,7 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
 
       calendar7: calendar7,
       calendar7Class: '',
-      //calendar7Name: 'same dates',
+      calendar7Name: 'same dates',
 
       conflictSelectedDisabled: 'DISABLED', // SELECTED | DISABLED
 
