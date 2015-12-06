@@ -30,7 +30,8 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       , h3 = new Date(2015, 11, 10)
       , h4 = new Date(2015, 10, 30)
       , h5 = new Date(2015, 11, 16)
-      , holidays = [h0, h1, h2, h3, h4, h5];
+      , h6 = new Date(2015, 11, 6)
+      , holidays = [h0, h1, h2, h3, h4, h5, h6];
 
     var c0 = new Date(2015, 11, 11)
       , c1 = new Date(2015, 11, 9)
@@ -43,13 +44,14 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       , c8 = new Date(2015, 11, 22)
       , c9 = new Date(2015, 11, 27)
       , c10 = new Date(2015, 11, 25)
+      , c11 = new Date(2015, 11, 6)
       , calendar1 = [c0, c1]
       , calendar2 = [c2, c3]
       , calendar3 = [c4]
-      , calendar4 = [c2, c5]
+      , calendar4 = [c2, c5, c11]
       , calendar5 = [c4, c10]
       , calendar6 = [c6, c7, c8, c9]
-      , calendar7 = [c5, c6];
+      , calendar7 = [c5, c6, c11];
 
     var d0 = new Date(2015, 11, 16)
       , d1 = new Date(2015, 11, 17)
@@ -61,11 +63,12 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
     var s0 = new Date(2015, 10, 31)  // preview month
       , s1 = new Date(2015, 11, 10) // holiday
       , s2 = new Date(2015, 11, 11) // holiday
+      , s7 = new Date(2015, 11, 6) //
       , s3 = new Date(2015, 11, 12) //
       , s4 = new Date(2015, 11, 12) // clone
       , s5 = new Date(2015, 11, 17) // conflict with disabled
       , s6 = new Date(2015, 12, 1); // conflict with disabled, next month
-    $scope.selectedDates = [s1, s2, s3, s4, s0, s5, s6];
+    $scope.selectedDates = [s1, s2, s3, s4, s0, s5, s6, s7];
 
     $scope.datepickerObject = {
       templateType: 'POPUP', // POPUP | MODAL
@@ -119,7 +122,7 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
 
       calendar2: calendar2,
       calendar2Class: '',
-      calendar2Name: 'calendar 2',
+      //calendar2Name: 'calendar 2',
 
       calendar3: calendar3,
       calendar3Class: '',
