@@ -1,4 +1,5 @@
 // Ionic Starter App
+ionic.Gestures.gestures.Hold.defaults.hold_threshold = 20;
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
@@ -31,7 +32,7 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       , h4 = new Date(2015, 10, 30)
       , h5 = new Date(2015, 11, 16)
       , h6 = new Date(2015, 11, 6)
-      , holidays = [h0, h1, h2, h3, h4, h5, h6];
+      , calendar0 = [h0, h1, h2, h3, h4, h5, h6];
 
     var c0 = new Date(2015, 11, 11)
       , c1 = new Date(2015, 11, 9)
@@ -112,9 +113,9 @@ angular.module('starter', ['ionic', 'ionic-multi-date-picker'])
       //viewMonth: $scope.selectedDates, //
       disabledDates: disabledDates,
 
-      holidays: holidays,
-      holidaysClass: '',
-      holidaysName: 'holidays',
+      calendar0: calendar0,
+      calendar0Class: '',
+      calendar0Name: 'holidays',
 
       calendar1: calendar1,
       //calendar1Class: '',
